@@ -12,6 +12,10 @@
             background-color: #f9f9f9;
             box-sizing: border-box;
         }
+        .header {
+            text-align: center; /* Center the title and description for better visibility */
+            margin-bottom: 20px;
+        }
         .container {
             display: flex;
             flex-direction: row;
@@ -64,8 +68,10 @@
     </style>
 </head>
 <body>
-    <h1>Blue Whales in Eastern Pacific</h1>
-    <p>This map animates the migration of blue whales through the Eastern Pacific from 1993 to 2009.</p>
+    <div class="header">
+        <h1>Blue Whales in Eastern Pacific</h1>
+        <p>This map animates the migration of blue whales through the Eastern Pacific from 1993 to 2009.</p>
+    </div>
     
     <div class="container">
         <div class="map-container">
@@ -83,7 +89,5 @@
             <p>Click the top-right button to access the Widget panel.</p>
         </div>
     </div>
- 
-
 </body>
 </html>
