@@ -10,9 +10,27 @@
             margin: 0;
             padding: 20px;
             background-color: #f9f9f9;
-            width: 100%;
-            max-width: none; /* Remove max-width for full screen */
             box-sizing: border-box;
+        }
+        .container {
+            display: flex;
+            flex-direction: row;
+            align-items: flex-start;
+            max-width: 100%;
+            gap: 20px;
+        }
+        .map-container {
+            flex: 1;
+            height: 600px; /* Adjust height as needed */
+            background-color: #ddd; /* Placeholder for map */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: 1px solid #ccc;
+        }
+        .instructions {
+            flex: 1;
+            max-width: 400px; /* Limit width for readability */
         }
         h1 {
             font-size: 24px;
@@ -34,22 +52,39 @@
         li {
             margin-bottom: 10px;
         }
+        /* Responsive adjustments */
+        @media (max-width: 768px) {
+            .container {
+                flex-direction: column;
+            }
+            .instructions {
+                max-width: none;
+            }
+        }
     </style>
 </head>
 <body>
     <h1>Blue Whales in Eastern Pacific</h1>
     <p>This map animates the migration of blue whales through the Eastern Pacific from 1993 to 2009.</p>
     
-    <h2>How to Use this Map</h2>
-    <p>To discover the migration patterns of blue whales:</p>
-    <ul>
-        <li><strong>Explore Timeline:</strong> Hover over the Time Series graph to obtain insights about the number of seen whales at each aggregated period.</li>
-        <li><strong>See Aggregated:</strong> Click 'Play' to animate the whale movements and observe emerging patterns.</li>
-        <li><strong>Filter Data Range:</strong> Drag across a timeline to focus on specific intervals.</li>
-        <li><strong>Navigate:</strong> Pan and zoom to see different areas of the map.</li>
-    </ul>
-    <p>Click the top-right button to access the Widget panel.</p>
-
+    <div class="container">
+        <div class="map-container">
+            <!-- Placeholder for CARTO map iframe; replace with actual embed code -->
+            <p>Map Placeholder (Embed your CARTO map iframe here)</p>
+        </div>
+        <div class="instructions">
+            <h2>How to Use this Map</h2>
+            <p>To discover the migration patterns of blue whales:</p>
+            <ul>
+                <li><strong>Explore Timeline:</strong> Hover over the Time Series graph to obtain insights about the number of seen whales at each aggregated period.</li>
+                <li><strong>See Aggregated:</strong> Click 'Play' to animate the whale movements and observe emerging patterns.</li>
+                <li><strong>Filter Data Range:</strong> Drag across a timeline to focus on specific intervals.</li>
+                <li><strong>Navigate:</strong> Pan and zoom to see different areas of the map.</li>
+            </ul>
+            <p>Click the top-right button to access the Widget panel.</p>
+        </div>
+    </div>
+ 
 <iframe width="100%" height="820" frameborder="0" src="https://clausa.app.carto.com/map/a6d34dc6-545d-4d92-be1f-864cf466adcc" allowfullscreen webkitallowfullscreen mozallowfullscreen oallowfullscreen msallowfullscreen></iframe>
 </body>
 </html>
