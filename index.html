@@ -25,7 +25,12 @@
         }
         .map-container {
             flex: 1;
-            height: 820px; /* Match iframe height */
+            height: 820px; /* Matches iframe height; adjust if needed */
+        }
+        iframe {
+            width: 100%;
+            height: 100%; /* Ensures iframe fills container */
+            border: none;
         }
         h1 {
             font-size: 24px;
@@ -51,7 +56,8 @@
    
     <div class="container">
         <div class="map-container">
-           <iframe src="https://clausa.app.carto.com/map/a6d34dc6-545d-4d92-be1f-864cf466adcc" allowfullscreen webkitallowfullscreen mozallowfullscreen oallowfullscreen msallowfullscreen></iframe>
+           <!-- Replace with your full CARTO embed iframe code here -->
+           <iframe width="100%" height="820" frameborder="0" src="https://clausa.app.carto.com/map/a6d34dc6-545d-4d92-be1f-864cf466adcc" allowfullscreen webkitallowfullscreen mozallowfullscreen oallowfullscreen msallowfullscreen></iframe>
         </div>
     </div>
 </body>
