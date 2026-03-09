@@ -13,7 +13,7 @@
             box-sizing: border-box;
         }
         .header {
-            text-align: center; /* Center the title and description for better visibility */
+            text-align: center;
             margin-bottom: 20px;
         }
         .container {
@@ -25,16 +25,7 @@
         }
         .map-container {
             flex: 1;
-            height: 600px; /* Adjust height as needed */
-            background-color: #ddd; /* Placeholder for map */
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            border: 1px solid #ccc;
-        }
-        .instructions {
-            flex: 1;
-            max-width: 400px; /* Limit width for readability */
+            height: 820px; /* Match iframe height */
         }
         h1 {
             font-size: 24px;
@@ -44,25 +35,10 @@
             font-size: 16px;
             margin-bottom: 20px;
         }
-        h2 {
-            font-size: 20px;
-            margin-bottom: 10px;
-        }
-        ul {
-            list-style-type: disc;
-            padding-left: 20px;
-            font-size: 16px;
-        }
-        li {
-            margin-bottom: 10px;
-        }
         /* Responsive adjustments */
         @media (max-width: 768px) {
             .container {
                 flex-direction: column;
-            }
-            .instructions {
-                max-width: none;
             }
         }
     </style>
@@ -72,12 +48,10 @@
         <h1>Blue Whales in Eastern Pacific</h1>
         <p>This map animates the migration of blue whales through the Eastern Pacific from 1993 to 2009.</p>
     </div>
-    
+   
     <div class="container">
         <div class="map-container">
-           <iframe  src="https://clausa.app.carto.com/map/a6d34dc6-545d-4d92-be1f-864cf466adcc" allowfullscreen webkitallowfullscreen mozallowfullscreen oallowfullscreen msallowfullscreen></iframe>
-        </div>
-
+           <iframe src="https://clausa.app.carto.com/map/a6d34dc6-545d-4d92-be1f-864cf466adcc" allowfullscreen webkitallowfullscreen mozallowfullscreen oallowfullscreen msallowfullscreen></iframe>
         </div>
     </div>
 </body>
